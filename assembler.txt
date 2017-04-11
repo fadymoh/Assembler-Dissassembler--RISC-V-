@@ -1,0 +1,12 @@
+main: addi  x18, x0, 0x14
+addi  x9, x0, 0x1e
+addi  x8, x0, 0x0
+while: beq x9, x0, 0x1c
+andi x5, x9, 0x01
+beq x5, x0, 0x8
+add x8, x8, x18
+next:
+slli x18, x18, 0x1
+srli x9, x9, 0x1
+jal x0, 0xffffffe8
+endWhile:
